@@ -1,0 +1,29 @@
+﻿<Page x:Class="prac9.MessagePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:prac9"
+      mc:Ignorable="d" 
+      Background="White"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MessagePage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Text="От кого:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="From" Grid.Column="1" Text="От кого:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <RichTextBox x:Name="Messg" Grid.ColumnSpan="2" Grid.Row="1" Background="White"/>
+        
+        <Button Click="Button_Click" Grid.Column="1" Grid.Row="2" Content="Otevtochka"/>
+        <Frame x:Name="homik" Grid.RowSpan="4" Grid.ColumnSpan="4"/>
+    </Grid>
+</Page>

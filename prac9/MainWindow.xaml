@@ -1,0 +1,33 @@
+﻿<Window x:Class="prac9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:local="clr-namespace:prac9"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="500" Background="#FF424242">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.4*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Вход" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Verdana" FontSize="16" Foreground="#FFF3F3F3"/>
+        <TextBox x:Name="Email" Grid.Row="1" Background="Transparent" OpacityMask="#FF4D1D1D" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" MinHeight="30" MinWidth="300" Text="Email" FontFamily="Bahnschrift" TextAlignment="Center" FontSize="14"/>
+        <PasswordBox  x:Name="Pswrd" Grid.Row="2"  Background="Transparent" OpacityMask="#FF4D1D1D" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" MinHeight="30" MinWidth="300"  FontFamily="Bahnschrift" />
+        <ComboBox x:Name="MailClientCbx" Grid.Column="1" SelectedIndex="0"  Background="Transparent" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <ComboBoxItem Content="Google" Tag="imap.gmail.com" Background="Transparent" />
+            <ComboBoxItem Content="Mail" Tag="imap.mail.ru"/>
+            <ComboBoxItem Content="Yandex" Tag="imap.yandex.ru"/>
+            <ComboBoxItem Content="Rambler" Tag="imap.rambler.ru"/>
+    </ComboBox> 
+            <Button  Click="Button_Click" Grid.Row="3" Grid.ColumnSpan="2" Background="#FF00897B" Content="Войти" />
+
+    </Grid>
+</Window>
